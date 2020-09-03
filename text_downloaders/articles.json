@@ -1,0 +1,53 @@
+{
+  "allowed_articles": [
+    "www.aftenposten.no",
+    "www.vg.no",
+    "www.adressa.no",
+    "www.bt.no",
+    "www.budstikka.no",
+    "www.fagbladet.no",
+    "www.dagbladet.no",
+    "www.nettavisen.no",
+    "www.nrk.no",
+    "www.journalisten.no",
+    "www.dinside.no",
+    "www.tek.no",
+    "www.kode24.no",
+    "www.klikk.no",
+    "www.seher.no",
+    "www.kk.no",
+    "www.forskning.no",
+    "www.khrono.no",
+    "www.dagsavisen.no",
+    "www.p3.no",
+    "www.tv2.no",
+    "www.borsen.no",
+    "www.frifagbevegelse.no",
+    "www.minmote.no",
+    "www.elbil24.no",
+    "www.klassekampen.no",
+    "www.finansavisen.no"
+  ],
+  "allowed_schools": [
+    "www.ntnu.no",
+    "www.uio.no",
+    "www.nhh.no"
+  ],
+  "allowed_domains": [
+    "www.nav.no",
+    "www.helsenorge.no",
+    "www.lommelegen.no",
+    "www.fhi.no",
+    "www.skatteetaten.no",
+    "www.mentalhelse.no",
+    "www.norge.no"
+  ]
+}
+
+
+
+
+
+
+
+
