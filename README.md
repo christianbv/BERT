@@ -1,4 +1,4 @@
 
-## DistilBERT
-Utvikling av norges første DistilBert (NLP)
+## BERT
+Utvikling av norges første Bert (NLP)
 
