@@ -1,6 +1,6 @@
 # Fremgangsmetode for å videretrene/trene opp BERT fra scratch:
 
-
+- Link til treningsdata: [BERT-training-data](https://drive.google.com/drive/folders/10zLTJCATlc1mLZyGhO-1EBXUjGKJVdX-?usp=sharing)
 
 ### Fremgangsmåte 1:
 
@@ -75,5 +75,26 @@ Feks for google sine tpu-er
   ctpu status ### Skal ikke være kjørende nå
 ```
 
+7. Dette lagrer modellen som .ckpt filer, anbefales deretter å gjøre om til PyTorch modell eller TF modell. Her er script for å gjøre om til PyTorch:
 
+```
+import torch
+from transformers import BertConfig, BertForPreTraining, load_tf_weights_in_bert
 
+"""
+  Params:
+    - ckpt_path, f.eks. bert_model.ckpt (Merk at filendelsen må være .ckpt, og ikke noe mer! Peker til alle 3 filene som lagres over).
+    - config_file, peker til bert_config.json fil (Må ha .json endelse)
+    - pytorch_dump_path, f.eks. pytorch_model.bin (Må ha .bin endelse, legg til tom folder)
+    
+    - NB, config_file og .ckpt filene må ligge i samme folder
+    
+"""
+def convert_ckpt_to_pytorch(ckpt_path, config_file, pytorch_dump_path):
+  config = BertConfig.from_json_file(config_file)
+  model = BertForPreTraining(config)
+  
+  load_tf_weights_in_bert(model, config, ckpt_path)
+  
+  torch.save(model.state_dict(), pytorch_dump_path)
+```
